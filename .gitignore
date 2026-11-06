@@ -1,0 +1,26 @@
+# ESP-IDF generated files; sdkconfig.defaults will be committed when introduced.
+build/
+build-*/
+managed_components/
+sdkconfig
+sdkconfig.old
+
+# Native tests and Python tooling
+.cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+compile_commands.json
+
+# Local environment
+.DS_Store
+.idea/
+.env
+.env.*
+!.env.example
+
+# Generated recordings; curated reports and fixtures should be committed explicitly.
+captures/
+*.log
