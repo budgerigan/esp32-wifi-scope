@@ -3,8 +3,9 @@
 A portable, passive 2.4 GHz Wi-Fi analyzer built around a classic ESP32,
 an SSD1306 OLED, and two buttons. The firmware will use C, ESP-IDF, and FreeRTOS.
 
-**Status: architecture and repository bootstrap. Firmware, tests, measurements,
-and hardware validation are not implemented yet.**
+**Status: architecture and initial board bring-up. Espressif's `hello_world` has
+been built and verified on the connected ESP32 with IDF v5.5.6. Analyzer firmware,
+its tests, performance measurements, and OLED validation are not implemented yet.**
 
 The purpose of this portfolio project is to demonstrate bounded memory use,
 safe binary parsing, concurrent firmware design, fault handling, and reproducible
@@ -34,12 +35,13 @@ The implementation guide is currently in Russian:
 - [Architecture](docs/architecture.md): module boundaries, ownership, state transitions, and measurement semantics.
 - [Roadmap and acceptance criteria](docs/roadmap.md): incremental milestones and evidence required for v1.
 - [First hardware step](docs/first-steps.md): board identification and the first ESP-IDF build.
+- [Board bring-up report](docs/hardware-bringup.md): observed chip, flash, toolchain, UART result, and repeat commands.
 
 ## Hardware and toolchain target
 
 | Item | Baseline |
 | --- | --- |
-| MCU | Classic ESP32 / ESP32-WROOM development board, exact board pending confirmation |
+| MCU | ESP32-D0WD-V3 rev. 3.1 and 4 MB external flash verified; exact DevKit layout pending confirmation |
 | SDK | ESP-IDF **v5.5.6**, target `esp32` |
 | Firmware | C and FreeRTOS |
 | Display | SSD1306, 128×64, I²C, framebuffer through `esp_lcd` |
